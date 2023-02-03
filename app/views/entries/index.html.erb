@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Books</h1>
+
+<table class="table table-success table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">author</th>
+      <th scope="col">Book</th>
+    </tr>
+  </thead>
+  <tbody>
+ <%i =1%>
+  <%@entries.each do |item| %>
+    <tr>
+      <th scope="row"><%=i%></th>
+      <td><%=item.author%></td>
+      <td><%=item.book%></td>
+    </tr>
+    <%i =i+1%>
+  <% end %>
+  </tbody>
+</table>
+<%= link_to "New entry", new_entry_path %>
